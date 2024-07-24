@@ -12,7 +12,7 @@ const readServiceAccountFile = () => {
   try {
     const serviceAccountPath = resolve(
       __dirname,
-      "./public/serviceAccount.json"
+      process.env.FIREBASE_SERVICE_ACCOUNT
     );
     return JSON.parse(readFileSync(serviceAccountPath, "utf8"));
   } catch (error) {
