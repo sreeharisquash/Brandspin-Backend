@@ -1,3 +1,4 @@
+import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -5,12 +6,11 @@ import otpRoutes from "./routes/otpRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import appointmentRoutes from "./routes/appointmentRoutes.js";
 import servicesRoutes from "./routes/serivcesRoutes.js";
-import e from "express";
 // import { isAuthenticated } from "./middleware/auth.js";
 
 dotenv.config();
 
-const app = e();
+const app = express();
 const port = parseInt(process.env.PORT || "3000", 10);
 const host = process.env.HOST || "0.0.0.0";
 
